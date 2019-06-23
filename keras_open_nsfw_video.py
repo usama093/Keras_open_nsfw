@@ -26,8 +26,8 @@ def main(argv):
         if(ret != True):
             break
         if(frameId % math.floor(frameRate) == 0):
-            cv2.imwrite('./images/temp.jpg', frame)
-            image_path = './images/temp.jpg'
+            cv2.imwrite('temp.jpg', frame)
+            image_path = 'temp.jpg'
             img = image.load_img(image_path, target_size=(224, 224))
             x = image.img_to_array(img)
             x = np.expand_dims(x, axis=0)
